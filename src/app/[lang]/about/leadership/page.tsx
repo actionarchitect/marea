@@ -53,7 +53,10 @@ export default async function LeadershipPage({ params }: { params: Promise<{ lan
                 <div className="py-8 flex flex-col md:flex-row md:items-baseline gap-2 md:gap-12">
                   <div className="md:w-48 shrink-0">
                     <p className="font-semibold text-lg text-foreground">
-                      {locale === 'ko' ? member.nameKo : member.nameEn}
+                      {member.nameKo}
+                    </p>
+                    <p className="text-xs font-mono tracking-wider text-muted-foreground mt-1">
+                      {member.nameEn.toUpperCase()}
                     </p>
                   </div>
                   <div className="md:w-56 shrink-0">
