@@ -8,8 +8,7 @@ const content = {
       heading: '마레아홀딩스의 시작',
       paragraphs: [
         '마레아홀딩스는 하나의 믿음에서 출발했습니다. AI가 세상을 평평하게 만들 수 있다는 것.',
-        '양질의 교육은 소수의 특권이었습니다. 전문가의 지식은 높은 문턱 뒤에 있었습니다. 기회는 태어난 곳에 따라 결정되었고, 창작의 도구는 자본을 가진 이들의 것이었습니다. 우리는 이 모든 격차의 근원에 같은 구조가 있다는 것을 알았습니다 — 정보, 자본, 인프라, 기회의 비대칭.',
-        'AI는 이 비대칭을 동시에 해소할 수 있는 유일한 기술입니다. 마레아홀딩스는 이 확신 위에 세워졌습니다. 우리의 철학이 닿는 곳마다 보이지 않던 장벽이 사라지고, 그 자리에 누구에게나 열린 기회가 만들어집니다. 그것이 마레아홀딩스가 불평등을 해소하는 방식입니다.',
+        '양질의 교육은 소수의 특권이었습니다. 전문가의 지식은 높은 문턱 뒤에 있었습니다. 기회는 태어난 곳에 따라 결정되었고, 창작의 도구는 자본을 가진 이들의 것이었습니다. 우리는 이 모든 격차의 근원에 같은 구조가 있다는 것을 알았습니다\n— 정보, 자본, 인프라, 기회의 비대칭.\n\nAI는 이 비대칭을 동시에 해소할 수 있는 유일한 기술입니다. 마레아홀딩스는 이 확신 위에 세워졌습니다. 우리의 철학이 닿는 곳마다 보이지 않던 장벽이 사라지고, 그 자리에 누구에게나 열린 기회가 만들어집니다. 그것이 마레아홀딩스가 불평등을 해소하는 방식입니다.',
       ],
     },
     thesis: {
@@ -70,7 +69,7 @@ export default async function OurStoryPage({ params }: { params: Promise<{ lang:
               <h2 className="text-2xl font-display font-semibold mb-8">{t.origin.heading}</h2>
               <div className="space-y-6">
                 {t.origin.paragraphs.map((p, i) => (
-                  <p key={i} className={`leading-relaxed text-foreground/80 ${i === 0 ? 'text-xl font-light italic' : ''}`}>
+                  <p key={i} className={`leading-relaxed text-foreground/80 whitespace-pre-line ${i === 0 ? 'text-xl font-light italic' : ''}`}>
                     {p}
                   </p>
                 ))}

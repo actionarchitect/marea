@@ -3,6 +3,13 @@ import { PageHero } from '@/components/pages/shared/PageHero'
 import { RevealSection } from '@/components/shared/RevealSection'
 import { leadership, ceoMessage } from '@/lib/data/team'
 
+const roleSummary: Record<string, { ko: string; en: string }> = {
+  ceo: { ko: '마레아홀딩스 창업자 · AI 사업 생태계 설계', en: 'Founder of Marea Holdings · AI Business Ecosystem Design' },
+  cto: { ko: 'AI 핵심 기술 아키텍처 및 제품 개발 총괄', en: 'AI Core Technology Architecture & Product Development' },
+  coo: { ko: '글로벌 사업 운영 및 전략적 파트너십 총괄', en: 'Global Business Operations & Strategic Partnerships' },
+  auditor: { ko: '경영 투명성 및 내부통제 체계 총괄', en: 'Management Transparency & Internal Control Systems' },
+}
+
 export default async function LeadershipPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const locale: Locale = isValidLocale(lang) ? lang : 'ko'
@@ -11,33 +18,57 @@ export default async function LeadershipPage({ params }: { params: Promise<{ lan
     <>
       <PageHero
         title={locale === 'ko' ? '리더십' : 'Leadership'}
-        subtitle={locale === 'ko' ? 'CEO 메시지와 경영진을 소개합니다' : 'A message from our CEO and executive team'}
+        subtitle={locale === 'ko' ? '마레아홀딩스의 경영진을 소개합니다' : 'Meet the executive team of Marea Holdings'}
         badge="About"
       />
-      <section className="py-20">
+
+      {/* CEO Message */}
+      <section className="py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <RevealSection>
-              <blockquote className="text-xl leading-relaxed text-muted-foreground font-light italic mb-8 border-l-4 border-[var(--brand)] pl-6">
+              <blockquote className="text-xl md:text-2xl leading-relaxed text-foreground/80 font-light italic whitespace-pre-line">
                 &ldquo;{locale === 'ko' ? ceoMessage.messageKo : ceoMessage.messageEn}&rdquo;
               </blockquote>
+              <p className="mt-8 text-sm text-muted-foreground">
+                — {locale === 'ko' ? '대표이사' : 'CEO'}
+              </p>
             </RevealSection>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-              {leadership.map((member, i) => (
-                <RevealSection key={member.id} delay={i * 0.08}>
-                  <div className="rounded-2xl border border-border p-6 text-center">
-                    <div className="w-20 h-20 rounded-full bg-foreground/5 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-2xl font-display font-bold text-foreground/20">M</span>
-                    </div>
-                    <p className="font-semibold">{locale === 'ko' ? member.nameKo : member.nameEn}</p>
-                    <p className="text-sm text-muted-foreground mt-1">
+      {/* Leadership List */}
+      <section className="py-16 md:py-24 border-t border-border">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16">
+          <RevealSection>
+            <p className="text-xs font-mono tracking-[0.2em] text-muted-foreground uppercase mb-12">
+              {locale === 'ko' ? 'LEADERSHIP' : 'LEADERSHIP'}
+            </p>
+          </RevealSection>
+
+          <div className="divide-y divide-border">
+            {leadership.map((member, i) => (
+              <RevealSection key={member.id} delay={i * 0.06}>
+                <div className="py-8 flex flex-col md:flex-row md:items-baseline gap-2 md:gap-12">
+                  <div className="md:w-48 shrink-0">
+                    <p className="font-semibold text-lg text-foreground">
+                      {locale === 'ko' ? member.nameKo : member.nameEn}
+                    </p>
+                  </div>
+                  <div className="md:w-56 shrink-0">
+                    <p className="text-sm text-foreground/70">
                       {locale === 'ko' ? member.titleKo : member.titleEn}
                     </p>
                   </div>
-                </RevealSection>
-              ))}
-            </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground">
+                      {locale === 'ko' ? roleSummary[member.id]?.ko : roleSummary[member.id]?.en}
+                    </p>
+                  </div>
+                </div>
+              </RevealSection>
+            ))}
           </div>
         </div>
       </section>

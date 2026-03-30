@@ -64,7 +64,7 @@ export function SectionEducation({ dict }: SectionEducationProps) {
           <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight tracking-tight whitespace-pre-line text-foreground">
             {dict.headline}
           </h2>
-          <p className="mt-6 text-muted-foreground max-w-2xl leading-relaxed text-base md:text-lg">
+          <p className="mt-6 text-muted-foreground max-w-2xl leading-relaxed text-base md:text-lg whitespace-pre-line">
             {dict.desc}
           </p>
         </RevealSection>
