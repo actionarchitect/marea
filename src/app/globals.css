@@ -4,41 +4,323 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================================================
+   MAREA HOLDINGS — GLOBAL COLOR PALETTE (Tier 1)
+   oklch(Lightness Chroma Hue)
+   L: 0(검정) → 1(흰색) | C: 0(무채색) → ~0.37(최대채도) | H: 0–360°
+   ============================================================ */
+
+:root {
+  /* --- Neutrals: 따뜻한 크림 스케일 (H=80 미세 웜톤) --- */
+  --color-neutral-0:    oklch(1    0      0);
+  --color-neutral-50:   oklch(0.98 0.004  80);
+  --color-neutral-100:  oklch(0.96 0.006  80);
+  --color-neutral-200:  oklch(0.92 0.006  80);
+  --color-neutral-300:  oklch(0.86 0.006  80);
+  --color-neutral-400:  oklch(0.72 0.005  80);
+  --color-neutral-500:  oklch(0.56 0.005  80);
+  --color-neutral-600:  oklch(0.44 0.004  80);
+  --color-neutral-700:  oklch(0.32 0.003  80);
+  --color-neutral-800:  oklch(0.22 0.003  80);
+  --color-neutral-900:  oklch(0.15 0.002  80);
+  --color-neutral-950:  oklch(0.12 0.002  80);
+  --color-neutral-1000: oklch(0    0      0);
+
+  /* --- Brand Indigo: 마스터브랜드 프라이머리 --- */
+  --color-indigo-50:   oklch(0.97 0.018 264);
+  --color-indigo-100:  oklch(0.94 0.034 264);
+  --color-indigo-200:  oklch(0.88 0.060 264);
+  --color-indigo-300:  oklch(0.79 0.094 264);
+  --color-indigo-400:  oklch(0.68 0.130 264);
+  --color-indigo-500:  oklch(0.55 0.160 264);
+  --color-indigo-600:  oklch(0.44 0.155 264);
+  --color-indigo-700:  oklch(0.35 0.140 264);
+  --color-indigo-800:  oklch(0.26 0.115 264);
+  --color-indigo-900:  oklch(0.18 0.082 264);
+  --color-indigo-950:  oklch(0.13 0.058 264);
+
+  /* --- Division Jewel Tones --- */
+
+  /* Education — Sapphire Blue */
+  --color-sapphire-400: oklch(0.64 0.155 232);
+  --color-sapphire-500: oklch(0.52 0.175 232);
+  --color-sapphire-600: oklch(0.42 0.165 232);
+
+  /* Real Estate — Smoky Jade */
+  --color-jade-400:    oklch(0.62 0.120 168);
+  --color-jade-500:    oklch(0.50 0.138 168);
+  --color-jade-600:    oklch(0.40 0.128 168);
+
+  /* Finance — Plum Noir */
+  --color-plum-400:    oklch(0.60 0.145 300);
+  --color-plum-500:    oklch(0.48 0.165 300);
+  --color-plum-600:    oklch(0.38 0.150 300);
+
+  /* Entertainment — Garnet */
+  --color-garnet-400:  oklch(0.61 0.175 12);
+  --color-garnet-500:  oklch(0.49 0.200 12);
+  --color-garnet-600:  oklch(0.38 0.185 12);
+
+  /* Trade — Amber Gold */
+  --color-gold-400:    oklch(0.78 0.145 70);
+  --color-gold-500:    oklch(0.66 0.165 70);
+  --color-gold-600:    oklch(0.52 0.155 70);
+
+  /* Gaming — Electric Violet */
+  --color-violet-400:  oklch(0.63 0.195 290);
+  --color-violet-500:  oklch(0.51 0.220 290);
+  --color-violet-600:  oklch(0.40 0.200 290);
+
+  /* AI — Teal Luminance */
+  --color-teal-400:    oklch(0.72 0.130 195);
+  --color-teal-500:    oklch(0.60 0.148 195);
+  --color-teal-600:    oklch(0.48 0.138 195);
+
+  /* --- Announcement bar --- */
+  --announcement-height: 32px;
+
+  /* --- Glassmorphism --- */
+  --glass-bg-light:  oklch(1 0 0 / 60%);
+  --glass-bg-dark:   oklch(0.18 0.003 80 / 55%);
+  --glass-border:    oklch(1 0 0 / 18%);
+  --glass-blur:      16px;
+  --glass-shadow:    0 8px 32px oklch(0 0 0 / 12%);
+
+  /* --- Fluid Type Scale --- */
+  --text-xs:   clamp(0.70rem, 0.68rem + 0.10vw, 0.75rem);
+  --text-sm:   clamp(0.83rem, 0.80rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.94rem, 0.90rem + 0.20vw, 1rem);
+  --text-lg:   clamp(1.06rem, 1.00rem + 0.30vw, 1.125rem);
+  --text-xl:   clamp(1.18rem, 1.10rem + 0.40vw, 1.25rem);
+  --text-2xl:  clamp(1.30rem, 1.18rem + 0.60vw, 1.5rem);
+  --text-3xl:  clamp(1.56rem, 1.38rem + 0.90vw, 1.875rem);
+  --text-4xl:  clamp(1.88rem, 1.60rem + 1.40vw, 2.25rem);
+  --text-5xl:  clamp(2.25rem, 1.80rem + 2.25vw, 3rem);
+  --text-6xl:  clamp(2.81rem, 2.10rem + 3.55vw, 3.75rem);
+  --text-7xl:  clamp(3.38rem, 2.40rem + 4.90vw, 4.5rem);
+
+  /* Display sizes */
+  --text-display-sm: clamp(3rem,   2.5rem + 2.5vw,  4rem);
+  --text-display-md: clamp(4rem,   3rem   + 5vw,    6rem);
+  --text-display-lg: clamp(5rem,   3.5rem + 7.5vw,  9rem);
+}
+
+/* ============================================================
+   TIER 2 — SEMANTIC TOKENS
+   Shadcn 컴포넌트가 소비하는 유일한 레이어
+   ============================================================ */
+
+:root {
+  --background:          var(--color-neutral-100);
+  --foreground:          var(--color-neutral-900);
+  --card:                var(--color-neutral-0);
+  --card-foreground:     var(--color-neutral-900);
+  --popover:             var(--color-neutral-0);
+  --popover-foreground:  var(--color-neutral-900);
+
+  --primary:             var(--color-indigo-600);
+  --primary-foreground:  var(--color-neutral-50);
+
+  --secondary:           var(--color-neutral-200);
+  --secondary-foreground: var(--color-neutral-800);
+
+  --muted:               var(--color-neutral-200);
+  --muted-foreground:    var(--color-neutral-600);
+
+  --accent:              var(--color-neutral-200);
+  --accent-foreground:   var(--color-neutral-900);
+
+  --destructive:         oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--color-neutral-50);
+
+  --border:              var(--color-neutral-300);
+  --input:               var(--color-neutral-300);
+  --ring:                var(--color-indigo-400);
+
+  /* Brand shortcuts */
+  --brand:               var(--color-indigo-600);
+  --brand-foreground:    var(--color-neutral-50);
+
+  /* Business pillar colors (4기둥) */
+  --business-education:     var(--color-sapphire-500);
+  --business-economy:       var(--color-gold-500);
+  --business-global:        var(--color-jade-500);
+  --business-entertainment: var(--color-garnet-500);
+  /* AI 관통색 */
+  --business-ai:            var(--color-teal-500);
+
+  --chart-1: var(--color-sapphire-500);
+  --chart-2: var(--color-gold-500);
+  --chart-3: var(--color-jade-500);
+  --chart-4: var(--color-garnet-500);
+  --chart-5: var(--color-teal-500);
+
+  --radius: 0.625rem;
+
+  --sidebar: var(--color-neutral-50);
+  --sidebar-foreground: var(--color-neutral-900);
+  --sidebar-primary: var(--color-indigo-600);
+  --sidebar-primary-foreground: var(--color-neutral-50);
+  --sidebar-accent: var(--color-neutral-200);
+  --sidebar-accent-foreground: var(--color-neutral-900);
+  --sidebar-border: var(--color-neutral-300);
+  --sidebar-ring: var(--color-indigo-400);
+}
+
+/* 다크모드 — 별도 설계된 병렬 스케일 */
+.dark {
+  --background:          var(--color-neutral-950);
+  --foreground:          var(--color-neutral-100);
+  --card:                var(--color-neutral-900);
+  --card-foreground:     var(--color-neutral-100);
+  --popover:             var(--color-neutral-900);
+  --popover-foreground:  var(--color-neutral-100);
+
+  --primary:             var(--color-indigo-400);
+  --primary-foreground:  var(--color-neutral-950);
+
+  --secondary:           var(--color-neutral-800);
+  --secondary-foreground: var(--color-neutral-200);
+
+  --muted:               var(--color-neutral-800);
+  --muted-foreground:    var(--color-neutral-400);
+
+  --accent:              var(--color-neutral-800);
+  --accent-foreground:   var(--color-neutral-100);
+
+  --destructive:         oklch(0.704 0.191 22.216);
+  --destructive-foreground: var(--color-neutral-950);
+
+  --border:              oklch(1 0 0 / 10%);
+  --input:               oklch(1 0 0 / 15%);
+  --ring:                var(--color-indigo-500);
+
+  --brand:               var(--color-indigo-400);
+  --brand-foreground:    var(--color-neutral-950);
+
+  --chart-1: var(--color-sapphire-400);
+  --chart-2: var(--color-jade-400);
+  --chart-3: var(--color-plum-400);
+  --chart-4: var(--color-garnet-400);
+  --chart-5: var(--color-gold-400);
+
+  --sidebar: var(--color-neutral-900);
+  --sidebar-foreground: var(--color-neutral-100);
+  --sidebar-primary: var(--color-indigo-400);
+  --sidebar-primary-foreground: var(--color-neutral-950);
+  --sidebar-accent: var(--color-neutral-800);
+  --sidebar-accent-foreground: var(--color-neutral-100);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: var(--color-indigo-500);
+}
+
+/* ============================================================
+   TIER 3 — DIVISION COLOR TOKENS
+   .division-* 클래스를 페이지 래퍼에 적용하면 하위 컴포넌트가
+   bg-division-accent, text-division-accent 등으로 자동 사용
+   ============================================================ */
+
+.division-education {
+  --division-accent:         var(--color-sapphire-500);
+  --division-accent-light:   var(--color-sapphire-400);
+  --division-accent-dark:    var(--color-sapphire-600);
+  --division-accent-surface: oklch(0.52 0.175 232 / 10%);
+}
+
+.division-economy {
+  --division-accent:         var(--color-gold-500);
+  --division-accent-light:   var(--color-gold-400);
+  --division-accent-dark:    var(--color-gold-600);
+  --division-accent-surface: oklch(0.66 0.165 70 / 10%);
+}
+
+.division-global {
+  --division-accent:         var(--color-jade-500);
+  --division-accent-light:   var(--color-jade-400);
+  --division-accent-dark:    var(--color-jade-600);
+  --division-accent-surface: oklch(0.50 0.138 168 / 10%);
+}
+
+.division-entertainment {
+  --division-accent:         var(--color-garnet-500);
+  --division-accent-light:   var(--color-garnet-400);
+  --division-accent-dark:    var(--color-garnet-600);
+  --division-accent-surface: oklch(0.49 0.200 12 / 10%);
+}
+
+.division-ai {
+  --division-accent:         var(--color-teal-500);
+  --division-accent-light:   var(--color-teal-400);
+  --division-accent-dark:    var(--color-teal-600);
+  --division-accent-surface: oklch(0.60 0.148 195 / 10%);
+}
+
+/* ============================================================
+   @theme inline — Tailwind v4 유틸리티 노출
+   ============================================================ */
+
 @theme inline {
+  /* Fonts */
+  --font-sans:    var(--font-pretendard), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-mono:    var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+
+  /* Business pillar colors */
+  --color-business-education: var(--business-education);
+  --color-business-economy: var(--business-economy);
+  --color-business-global: var(--business-global);
+  --color-business-entertainment: var(--business-entertainment);
+  --color-business-ai: var(--business-ai);
+
+  /* Division accent (contextual) */
+  --color-division-accent:         var(--division-accent);
+  --color-division-accent-light:   var(--division-accent-light);
+  --color-division-accent-dark:    var(--division-accent-dark);
+  --color-division-accent-surface: var(--division-accent-surface);
+
+  /* Chart */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radius */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -46,76 +328,31 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Container */
+  --container-sm:   640px;
+  --container-md:   768px;
+  --container-lg:   1024px;
+  --container-xl:   1280px;
+  --container-2xl:  1440px;
+  --container-hero: 1920px;
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+@utility glass-panel {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+/* ============================================================
+   BASE LAYER
+   ============================================================ */
 
 @layer base {
   * {
@@ -123,8 +360,41 @@
   }
   body {
     @apply bg-background text-foreground;
+    padding-top: calc(var(--announcement-height, 32px) + 64px);
   }
   html {
     @apply font-sans;
   }
+
+  /* 한영 이중언어 타이포그래피 */
+  :lang(ko) {
+    letter-spacing: -0.01em;
+    word-break: keep-all;
+  }
+
+  :lang(ko) body,
+  :lang(ko) p,
+  :lang(ko) li {
+    line-height: 1.85;
+  }
+
+  :lang(en) body,
+  :lang(en) p {
+    line-height: 1.65;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Dark mode glassmorphism override */
+.dark .glass-panel {
+  background: var(--glass-bg-dark);
 }

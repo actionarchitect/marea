@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "education": "Education",
+    "socialFinance": "Social & Finance",
+    "entertainment": "Entertainment",
+    "vision": "Vision",
+    "language": "KO"
+  },
+  "home": {
+    "hero": {
+      "badge": "AI VENTURE GROUP — SEOUL",
+      "headline": "AI Levels\nthe Playing\nField",
+      "subtitle": "We dismantle inequality in learning, opportunity, geography, and culture\nto give everyone the same starting line.",
+      "cta1": "Explore Businesses",
+      "cta2": "Our Vision",
+      "slides": [
+        { "label": "Education", "color": "sapphire" },
+        { "label": "Social & Finance", "color": "gold" },
+        { "label": "Global", "color": "jade" },
+        { "label": "Entertainment", "color": "garnet" }
+      ]
+    },
+    "education": {
+      "number": "01",
+      "label": "EDUCATION",
+      "headline": "Rewriting the Economics\nof Education Production",
+      "desc": "Traditional education video production requires scriptwriters, studio bookings, voice actors, camera crews, and post-production editors — costing tens of thousands of dollars and weeks of lead time. Veltis AI Studio replaces the entire chain with a single AI pipeline. Input a script, and the system handles lesson planning, AI instructor generation, voice synthesis, and editing to deliver a finished education video.",
+      "flagship": "VELTIS AI STUDIO — FLAGSHIP",
+      "pipeline": {
+        "label": "AI PRODUCTION PIPELINE",
+        "before": "Traditional Process",
+        "after": "Veltis Pipeline",
+        "beforeSteps": ["Scriptwriting", "Studio Booking", "Voice Casting", "Shoot & Record", "Post-Production", "QA & Revisions"],
+        "afterSteps": ["Script Input", "AI Lesson Design", "AI Instructor", "AI Voice Synth", "Auto Edit", "Video Complete"],
+        "beforeCost": "Tens of thousands · 2-4 weeks",
+        "afterCost": "Minutes · 90% cost reduction"
+      },
+      "veltisStudio": {
+        "title": "Veltis AI Studio",
+        "subtitle": "End-to-End Education Video Automation",
+        "desc": "Feed in a script, get a finished video featuring an AI avatar instructor. An end-to-end pipeline that produces studio-grade educational content without cameras, editors, or voice actors. This is our core operating product.",
+        "tags": ["AI AVATAR", "TEXT-TO-VIDEO", "PRODUCTION"]
+      },
+      "veltisSign": {
+        "title": "Veltis Sign",
+        "subtitle": "Sign Language Accessibility Module",
+        "desc": "Built on Korean Sign Language (KSL) 3D motion capture data, our system automatically generates avatar videos performing sign language from text input. An accessibility module running on the Veltis pipeline, delivering equal learning opportunities for hearing-impaired students.",
+        "tags": ["KSL 3D MOCAP", "TEXT-TO-SIGN", "ACCESSIBILITY"]
+      },
+      "dataset": {
+        "label": "DATA INFRASTRUCTURE",
+        "title": "KSL-EDU 3D",
+        "subtitle": "Korean Sign Language Motion Dataset",
+        "desc": "We are building a 950-clip Korean Sign Language 3D motion capture dataset from the ground up. Korea's first high-precision sign language AI training data for education, research, and commercialization.",
+        "tags": ["3D MOCAP · 950 CLIPS", "SHIPPING 2026"],
+        "stats": [
+          { "value": "950", "label": "DATA CLIPS" },
+          { "value": "4K", "label": "RESOLUTION" },
+          { "value": "3D", "label": "MOTION DATA" },
+          { "value": "AI", "label": "READY" }
+        ]
+      }
+    },
+    "socialFinance": {
+      "number": "02",
+      "label": "SOCIAL & FINANCE",
+      "headline": "Expert Knowledge,\nEveryone's Tool",
+      "desc": "We apply AI to professional domains — startups, marketing, real estate, finance — to close knowledge gaps, while expanding into African emerging markets with Cameroon as our base.",
+      "services": [
+        { "title": "Startup AI", "desc": "Business plan generation, incorporation guides, fundraising simulations. AI handles the groundwork at every stage of the startup journey." },
+        { "title": "Marketing Automation", "desc": "From ad copy generation to performance analytics. SMBs gain enterprise-grade marketing capabilities through AI." },
+        { "title": "Real Estate Intelligence", "desc": "AI-powered market analysis and investment simulation eliminate information asymmetry. Data replaces intuition." },
+        { "title": "Finance AI", "desc": "Personal asset management automation, portfolio analysis, financial literacy education. Expert-level insight available to everyone." },
+        { "title": "Africa Business", "desc": "Trade brokerage, university education platforms, technology export. Real business operations across Africa with Cameroon as the base." }
+      ],
+      "africa": {
+        "label": "AFRICA INITIATIVE",
+        "headline": "Africa Strategy,\nStarting from Cameroon",
+        "desc": "We operate resource trade, AI education platforms, and technology export businesses with local partners in Cameroon. Building a sustainable growth foundation through ODA-linked projects and local startup incubation.",
+        "items": [
+          { "title": "Resource Trade Brokerage", "tags": "Cobalt · Nickel · Mineral Resources" },
+          { "title": "Local University Education Platform", "tags": "AI Education Content Localization" },
+          { "title": "ODA Development Projects", "tags": "KOICA · World Bank Partnership" },
+          { "title": "Technology Export", "tags": "EdTech · AI Platforms" }
+        ]
+      }
+    },
+    "entertainment": {
+      "number": "03",
+      "label": "ENTERTAINMENT",
+      "headline": "Creative Tools\nfor Everyone",
+      "desc": "We apply AI avatar technology to content production, gaming, and music. Opening an era where studio-quality output is possible without studios or specialized equipment.",
+      "services": [
+        { "bg": "CONTENT", "title": "AI Content Studio", "desc": "AI avatar-based dramas, webtoon-adapted animations, short-form series production. Studio-quality video content without actors or physical shoots.", "tags": ["AI AVATAR", "SHORT-FORM", "ANIMATION"] },
+        { "bg": "GAME", "title": "AI Game Development", "desc": "AI-generated characters, procedural stories, player-adaptive difficulty. Small teams achieving the depth of major titles.", "tags": ["PROCEDURAL", "AI NPC"] },
+        { "bg": "MUSIC", "title": "AI Music Production", "desc": "AI composition, vocal synthesis, sound design automation. Producing commercial-grade music without a music degree.", "tags": ["AI COMPOSE", "VOCAL SYNTH"] }
+      ]
+    },
+    "vision": {
+      "label": "OUR VISION",
+      "headline": "AI Levels\nthe Playing\nField",
+      "desc": "One philosophy runs through every business. AI is not a tool for a specific industry — it is infrastructure that redesigns the structure of inequality.",
+      "pillars": [
+        { "title": "Education Equality", "desc": "Production that once cost tens of thousands and took weeks now takes minutes. Building infrastructure so everyone can access the same quality of education, beyond barriers of language and disability.", "color": "sapphire" },
+        { "title": "Economic Opportunity", "desc": "Democratizing expert knowledge in startups, finance, and real estate through AI. Technology closes the gaps created by information asymmetry, opening the same doors for everyone.", "color": "gold" },
+        { "title": "Cultural Access", "desc": "Creating content, developing games, and producing music without studios or specialized equipment. Distributing tools for creativity equally, closing the gap in cultural experience.", "color": "garnet" },
+        { "title": "Global Connection", "desc": "From Seoul to Cameroon. AI becomes the bridge that connects opportunities beyond geographical inequality. Supporting emerging market growth through technology export and education platforms.", "color": "jade" }
+      ]
+    },
+    "news": {
+      "title": "Latest News",
+      "viewAll": "View All News",
+      "all": "All",
+      "company": "Company"
+    }
+  },
+  "footer": {
+    "tagline": "AI Levels the Playing Field",
+    "rights": "© 2026 Marea Holdings. All rights reserved.",
+    "address": "Marea Holdings · Seoul, Korea",
+    "products": "Key Businesses",
+    "veltis": "Veltis AI Studio",
+    "africa": "Africa Initiative",
+    "dataset": "KSL-EDU 3D Dataset",
+    "contact": "Contact",
+    "email": "contact@marea.co.kr"
+  }
+}

@@ -1,0 +1,132 @@
+import type { Business } from './types'
+
+export const businesses: Business[] = [
+  {
+    slug: 'education',
+    nameKo: '마레아 에듀',
+    nameEn: 'Marea Education',
+    taglineKo: '배움으로 세상을 평평하게',
+    taglineEn: 'Leveling the World Through Learning',
+    descKo: '마레아 에듀는 AI 기술로 교육의 접근성 문제를 근본적으로 해결합니다. 자회사 Veltis를 통해 교육 영상 자동화 플랫폼(Veltis AI Studio)을 상용화했으며, 청각장애인을 위한 수어 아바타 솔루션(Veltis Sign)을 개발 중입니다. 현재 국내 기업 교육 시장과 공공 교육 기관을 대상으로 서비스를 제공하고 있으며, 글로벌 온라인 교육 시장 진출을 준비하고 있습니다.',
+    descEn: 'Marea Education fundamentally solves educational accessibility through AI technology. Through our subsidiary Veltis, we have commercialized an AI video automation platform (Veltis AI Studio) and are developing a sign language avatar solution (Veltis Sign) for the hearing impaired. We currently serve the domestic corporate training market and public education institutions, while preparing to enter the global online education market.',
+    icon: 'GraduationCap',
+    featured: true,
+    externalUrl: 'https://veltis.kr',
+    services: [
+      {
+        nameKo: 'Veltis AI Studio',
+        nameEn: 'Veltis AI Studio',
+        descKo: '스크립트를 입력하면 AI 아나운서가 출연하는 교육 영상과 PPT 기반 강의 영상이 자동으로 생성됩니다. 기업 교육, 공공기관 교육 콘텐츠 제작에 활용되고 있으며, 영상 제작 비용을 최대 90% 절감합니다.',
+        descEn: 'Input a script and AI automatically generates educational videos with virtual announcers and PPT-based lecture videos. Currently used for corporate and public institution training content, reducing video production costs by up to 90%.',
+      },
+      {
+        nameKo: 'Veltis Sign',
+        nameEn: 'Veltis Sign',
+        descKo: '텍스트와 음성을 실시간으로 수어로 변환하는 AI 아바타 솔루션입니다. 청각장애인의 교육 콘텐츠 접근성을 획기적으로 개선하며, 공공기관 및 교육 플랫폼 도입을 목표로 개발 중입니다.',
+        descEn: 'An AI avatar solution that converts text and speech to sign language in real time. Dramatically improves educational content accessibility for the hearing impaired, currently in development targeting public institutions and education platforms.',
+      },
+      {
+        nameKo: 'AI 맞춤 학습 플랫폼',
+        nameEn: 'AI Adaptive Learning Platform',
+        descKo: '학습자의 이해도, 학습 속도, 취약 영역을 AI가 실시간으로 분석하여 개인별 최적 커리큘럼을 설계합니다. 기업 교육과 온라인 학위 과정에 적용을 준비하고 있습니다.',
+        descEn: 'AI analyzes learner comprehension, pace, and weak areas in real time to design optimal personalized curricula. Being prepared for deployment in corporate training and online degree programs.',
+      },
+    ],
+  },
+  {
+    slug: 'economy',
+    nameKo: '마레아 이코노미',
+    nameEn: 'Marea Economy',
+    taglineKo: '기회의 문턱을 낮추다',
+    taglineEn: 'Lowering the Barriers to Opportunity',
+    descKo: '마레아 이코노미는 AI를 활용해 창업, 마케팅, 부동산, 금융 분야에서 정보 비대칭과 경제적 장벽을 해소합니다. 전문가만 접근 가능했던 시장 분석, 투자 전략, 마케팅 자동화를 AI로 민주화하여 소규모 창업자와 개인 투자자도 데이터 기반 의사결정을 할 수 있는 생태계를 구축합니다.',
+    descEn: 'Marea Economy uses AI to eliminate information asymmetry and economic barriers in startups, marketing, real estate, and finance. By democratizing market analysis, investment strategies, and marketing automation through AI, we are building an ecosystem where small entrepreneurs and individual investors can make data-driven decisions.',
+    icon: 'TrendingUp',
+    services: [
+      {
+        nameKo: 'AI 창업 지원 플랫폼',
+        nameEn: 'AI Startup Support Platform',
+        descKo: '사업 아이디어 검증부터 시장 규모 분석, 경쟁사 분석, 사업계획서 작성, 투자자 매칭까지 창업의 전 과정을 AI가 지원합니다. 초기 창업자의 실패 확률을 낮추고 투자 유치 성공률을 높이는 것을 목표로 합니다.',
+        descEn: 'AI supports the entire startup journey from idea validation and market sizing to competitor analysis, business plan writing, and investor matching. Our goal is to reduce early-stage failure rates and increase fundraising success.',
+      },
+      {
+        nameKo: 'AI 마케팅 솔루션',
+        nameEn: 'AI Marketing Solution',
+        descKo: '고객 행동 데이터 분석, 타겟 세그먼트 자동 추출, 광고 크리에이티브 생성, 성과 최적화를 AI가 통합 관리합니다. 중소기업과 스타트업이 대기업 수준의 마케팅 역량을 보유할 수 있도록 지원합니다.',
+        descEn: 'AI manages customer behavior analysis, automatic target segmentation, ad creative generation, and performance optimization end-to-end. Enabling SMBs and startups to achieve enterprise-level marketing capabilities.',
+      },
+      {
+        nameKo: '부동산 · 금융 AI',
+        nameEn: 'Real Estate & Finance AI',
+        descKo: '부동산 시장 시세 예측, 투자 적정 시점 분석, 포트폴리오 리밸런싱을 AI가 수행합니다. 개인 투자자에게 기관 투자자 수준의 분석 도구를 제공하여 합리적인 자산 관리를 가능하게 합니다.',
+        descEn: 'AI performs real estate market price forecasting, optimal investment timing analysis, and portfolio rebalancing. Providing individual investors with institutional-grade analysis tools for rational asset management.',
+      },
+    ],
+  },
+  {
+    slug: 'global',
+    nameKo: '마레아 글로벌',
+    nameEn: 'Marea Global',
+    taglineKo: '격차 없는 세계를 만들다',
+    taglineEn: 'Building a World Without Gaps',
+    descKo: '마레아 글로벌은 아프리카를 시작으로 교육·에너지 인프라가 부족한 지역에서 종합 개발 프로젝트를 추진합니다. 대학 캠퍼스 건설, AI 기반 교육 시스템 보급, 전력 인프라 구축을 통합적으로 수행합니다. "대학을 짓고, 전기를 연결하고, AI로 가르친다" — 이것이 마레아 글로벌의 접근 방식입니다.',
+    descEn: 'Marea Global pursues comprehensive development projects in regions lacking educational and energy infrastructure, starting with Africa. We integrate university campus construction, AI-powered education deployment, and power infrastructure development. "Build the university, connect the electricity, teach with AI" — this is the Marea Global approach.',
+    icon: 'Globe',
+    services: [
+      {
+        nameKo: '아프리카 대학 건설',
+        nameEn: 'African University Development',
+        descKo: '현지 산업 수요에 맞춘 실용 학과 중심의 대학 캠퍼스를 설계·건설합니다. IT, 농업기술, 에너지 공학 등 현지에서 즉시 활용 가능한 인재를 양성하는 것이 목표입니다. 현재 동아프리카 지역을 첫 번째 거점으로 검토 중입니다.',
+        descEn: 'We design and build university campuses centered on practical departments aligned with local industry demand. The goal is to cultivate talent in IT, agricultural technology, and energy engineering that can be immediately applied locally. Currently evaluating East Africa as our first base.',
+      },
+      {
+        nameKo: '현지 AI 교육 시스템',
+        nameEn: 'Local AI Education System',
+        descKo: 'Veltis 기술을 기반으로 현지 언어 교육 콘텐츠를 자동 생성하고, 인터넷이 불안정한 환경에서도 작동하는 오프라인 학습 시스템을 구축합니다. 현지 교육자 양성 프로그램을 병행하여 지속 가능한 교육 생태계를 만듭니다.',
+        descEn: 'Based on Veltis technology, we auto-generate educational content in local languages and build offline learning systems that work even with unstable internet. We run parallel local educator training programs to create a sustainable education ecosystem.',
+      },
+      {
+        nameKo: '에너지 인프라',
+        nameEn: 'Energy Infrastructure',
+        descKo: '교육과 생활의 전제 조건인 전력 문제를 해결합니다. 태양광·소규모 발전 등 현지 환경에 최적화된 에너지 솔루션을 설계하고, 대학 캠퍼스와 주변 커뮤니티에 안정적인 전력을 공급합니다.',
+        descEn: 'Solving the electricity challenge — the prerequisite for education and daily life. We design energy solutions optimized for local conditions including solar and micro-generation, providing stable power to university campuses and surrounding communities.',
+      },
+      {
+        nameKo: '국제 개발 협력',
+        nameEn: 'International Development Cooperation',
+        descKo: 'KOICA, UN 산하기관, 현지 정부와 협력하여 교육 정책 수립과 인프라 사업 실행을 지원합니다. ODA(공적개발원조) 사업 참여를 통해 지속 가능한 개발 모델을 구축합니다.',
+        descEn: 'We partner with KOICA, UN agencies, and local governments to support education policy development and infrastructure project execution. Building sustainable development models through participation in ODA programs.',
+      },
+    ],
+  },
+  {
+    slug: 'entertainment',
+    nameKo: '마레아 엔터',
+    nameEn: 'Marea Entertainment',
+    taglineKo: '즐거움으로 경계를 넘다',
+    taglineEn: 'Crossing Boundaries Through Joy',
+    descKo: '마레아 엔터는 AI 기술을 콘텐츠 제작 파이프라인 전반에 적용하여 기획, 제작, 배급의 효율을 혁신합니다. 게임 개발에서는 AI 기반 실시간 밸런싱과 유저 행동 분석을 통해 차별화된 게임 경험을 제공하며, 자체 IP를 개발하여 글로벌 시장으로 확장합니다.',
+    descEn: 'Marea Entertainment applies AI technology across the entire content production pipeline to revolutionize planning, production, and distribution efficiency. In game development, we deliver differentiated gaming experiences through AI-powered real-time balancing and user behavior analysis, while developing original IPs for global market expansion.',
+    icon: 'Clapperboard',
+    services: [
+      {
+        nameKo: 'AI 콘텐츠 프로덕션',
+        nameEn: 'AI Content Production',
+        descKo: '시나리오 분석, 촬영 계획 최적화, 후반 작업 자동화까지 AI가 콘텐츠 제작의 전 과정을 효율화합니다. 기존 제작 비용 대비 40% 이상 절감하면서도 품질을 유지하는 프로덕션 파이프라인을 운영합니다.',
+        descEn: 'From scenario analysis and shooting plan optimization to post-production automation, AI streamlines the entire content creation process. Operating a production pipeline that maintains quality while reducing costs by over 40% compared to traditional methods.',
+      },
+      {
+        nameKo: '게임 개발',
+        nameEn: 'Game Development',
+        descKo: 'AI가 실시간으로 플레이어 행동 패턴을 분석하고, 게임 난이도와 경제 밸런스를 동적으로 조정합니다. 모바일과 PC 플랫폼을 대상으로 자체 게임을 개발하고 있으며, 글로벌 퍼블리싱을 준비 중입니다.',
+        descEn: 'AI analyzes player behavior patterns in real time and dynamically adjusts game difficulty and economic balance. We are developing original games for mobile and PC platforms while preparing for global publishing.',
+      },
+      {
+        nameKo: 'IP 비즈니스',
+        nameEn: 'IP Business',
+        descKo: '웹툰, 웹소설, 캐릭터 등 오리지널 IP를 개발하고, 영상·게임·머천다이징으로 확장하는 종합 IP 매니지먼트를 수행합니다. AI 기반 트렌드 분석으로 시장 수요에 맞는 IP 기획을 지원합니다.',
+        descEn: 'We develop original IPs including webtoons, web novels, and characters, then expand them into video, gaming, and merchandising through comprehensive IP management. AI-powered trend analysis supports IP planning aligned with market demand.',
+      },
+    ],
+  },
+]
